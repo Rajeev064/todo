@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    {% block body %}
+    <div class="login">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <h2>{{message}}</h2>
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form action="/login" method="POST">
+            <label>Enter Email Address:</label>
+            <input id="email" name="email" type="email" required><br>
+            <label>Enter Password:</label>
+            <input id="password" name="password" type="text" required><br>
+            <input type="submit" value="Log In">
+        </form>
+    </div>
+{% endblock %}
+</body>
+</html>
