@@ -42,7 +42,6 @@ def register():
             try:
                 db.session.add(new_contact)
                 db.session.commit()
-                flash("Email Added ,now login")
                 return render_template('login.html')
             except:
                 return 'error in registering '
