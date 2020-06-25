@@ -51,6 +51,6 @@ def logout():
     session['logged_in'] = False
     return home()
 
-# if __name__ == "__main__":
-app.secret_key = 'f3cfe9ed8fae309f02079dbf'
-app.run(debug=True)
+if __name__ == "__main__":
+    app.secret_key = 'f3cfe9ed8fae309f02079dbf'
+    app.run(debug=True)
