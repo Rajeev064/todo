@@ -9,15 +9,15 @@ import smtplib
 
 app = Flask(__name__)
 Bootstrap(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://zyfoxoolnlkfez:a41afb777694a73241c20df5d23547da59d92fdf410ab42476656bbc06e6200e@ec2-34-233-226-84.compute-1.amazonaws.com:5432/d1scfbvnegodr2'
+app.config['SQLALCHEMY_DATABASE_URI'] = """PostGreSql link of heroku"""
 app.config.update(
     DEBUG=False,
 	#EMAIL SETTINGS
 	MAIL_SERVER='smtp.gmail.com',
 	MAIL_PORT=465,
 	MAIL_USE_SSL=True,
-	MAIL_USERNAME = 'rajeevdemoprojects@gmail.com',
-	MAIL_PASSWORD = 'Rajeev_102'
+	MAIL_USERNAME = """Email-ID""" ,
+	MAIL_PASSWORD = """"Email-Password"""
 
 
 )
